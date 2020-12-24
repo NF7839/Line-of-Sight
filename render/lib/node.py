@@ -1,5 +1,5 @@
-from lineofsight.lib.edge import Edge
-from lineofsight.res.glob import *
+from render.lib.edge import Edge
+from render.res.glob import *
 import pygame
 
 

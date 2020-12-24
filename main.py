@@ -1,5 +1,5 @@
-from lineofsight.lib.board import Board
-from lineofsight.res.glob import *
+from render.lib.board import Board
+from render.res.glob import *
 from time import time
 import pygame
 
@@ -10,7 +10,7 @@ def main():
     pygame.display.set_caption(TITLE)
 
     scr_size = (WIDTH + 1, HEIGHT + 1) if DRAW_GRID else (WIDTH, HEIGHT)
-    scr_args = (scr_size, pygame.FULLSCREEN) if FULLSCREEN else (scr_size, ) 
+    scr_args = (scr_size, pygame.FULLSCREEN) if FULLSCREEN else (scr_size, )
     screen = pygame.display.set_mode(*scr_args)
 
     # def __init__(self, screen, size, pixelWidth, drawGrid=0):

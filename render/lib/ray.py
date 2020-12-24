@@ -1,4 +1,4 @@
-from lineofsight.res.glob import *
+from render.res.glob import *
 import math
 
 # radius'un önemi yok çünkü biz zaten gönderdiğimiz rayi ışın olarak kabul ediyoruz

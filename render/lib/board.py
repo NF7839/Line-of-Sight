@@ -1,7 +1,7 @@
-from lineofsight.lib.node import Node
-from lineofsight.lib.edge import Edge
-from lineofsight.lib.ray import Ray
-from lineofsight.res.glob import *
+from render.lib.node import Node
+from render.lib.edge import Edge
+from render.lib.ray import Ray
+from render.res.glob import *
 import pygame
 
 
