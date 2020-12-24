@@ -6,6 +6,7 @@ import pygame
 
 
 class Board:
+    # Ekranın köşelerinş köşeler listesine ekliyoruz
     empty_edges = tuple([
         Edge((0, 0), (WIDTH, 0)),
         Edge((WIDTH, 0), (WIDTH, HEIGHT)),
@@ -174,10 +175,6 @@ class Board:
         self.corners = set(self.corners)
 
     def __calc_rays(self, m_pos, radius=500):
-        # test için
-        # self.edges = [Edge((500, 500), (600, 600))]
-        # self.corners = [(500, 500), (600, 600)]
-
         rays = []
         for corner in self.corners:
             # corner ile mouse pozisyouna çizgi çekip açısını alıyoruz
@@ -189,10 +186,10 @@ class Board:
                 ray.calc_intersection(self.edges)
                 rays.append(ray)
 
+        if len(rays) > 1:
             # açıya göre sıralıyorum
             rays.sort(key=lambda ray: ray.angle)
 
-        if len(rays) > 1:
             for i in range(len(rays) - 1):
                 # sırayla tüm raylerin arası çiziliyor
                 if DRAW_LIGHT:
